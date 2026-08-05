@@ -13,12 +13,13 @@ function MyBooking() {
 
             const token = localStorage.getItem("token");
             // console.log(token);
-            const response = await axios.get("http://localhost:3000/api/bookings/mybookings",
-                {
-                    headers:{
-                        Authorization:`Bearer ${token}`
-                    }
-                }
+            const response = await axios.get(
+              "https://quickstay-backend-1.onrender.com/api/bookings/mybookings",
+              {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              },
             );
             console.log(response.data);
             setBookings(response.data);
@@ -33,11 +34,14 @@ function MyBooking() {
        const handleDelete = async (id) => {
          const token = localStorage.getItem("token");
 
-         await axios.delete(`http://localhost:3000/api/bookings/${id}`, {
-           headers: {
-             Authorization: `Bearer ${token}`,
+         await axios.delete(
+           `https://quickstay-backend-1.onrender.com/api/bookings/${id}`,
+           {
+             headers: {
+               Authorization: `Bearer ${token}`,
+             },
            },
-         });
+         );
          setBookings(bookings.filter((booking) => booking._id !== id));
        };
 

@@ -13,12 +13,13 @@ function Signup() {
   const [password, setPassword] = useState("");
 
   const handleSignup = async ()=>{
-    const response = await axios.post("http://localhost:3000/api/users/signup",
+    const response = await axios.post(
+      "https://quickstay-backend-1.onrender.com/api/users/signup",
       {
         name,
         email,
-        password
-      }
+        password,
+      },
     );
     localStorage.setItem("token",response.data.token)
 

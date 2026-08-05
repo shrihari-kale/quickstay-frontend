@@ -18,7 +18,10 @@ function Hero() {
 
           const getHotels = async () => {
               try {
-                  const response = await axios.get( "http://localhost:3000/api/hotels");
+                  // const response = await axios.get( "http://localhost:3000/api/hotels");
+                  const response = await axios.get(
+                    "https://quickstay-backend-1.onrender.com/api/hotels",
+                  );
 
                   setHotels(response.data);
               }catch (error){

@@ -18,7 +18,9 @@ function HotelDetails() {
   useEffect(() => {
     const getAllHotels = async () => {
       try{
-        const res = await axios.get("http://localhost:3000/api/hotels");
+        const res = await axios.get(
+          "https://quickstay-backend-1.onrender.com/api/hotels",
+        );
         setAllHotels(res.data);
       }catch (error) {
         console.log(error);
@@ -39,7 +41,7 @@ function HotelDetails() {
     const getHotel = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/hotels/${id}`,
+          `https://quickstay-backend-1.onrender.com/api/hotels/${id}`,
         );
       
         // console.log(hotel);

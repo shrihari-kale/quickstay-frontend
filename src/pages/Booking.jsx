@@ -47,29 +47,29 @@ function Booking() {
          
            // Step 3
          const response = await axios.post(
-             "http://localhost:3000/api/bookings",
-             {
-               hotelName: hotel.name,
+           "https://quickstay-backend-1.onrender.com/api/bookings",
+           {
+             hotelName: hotel.name,
 
-               fullName,
-               email,
-               mobile,
-               checkIn,
-               checkOut,
-               guests,
+             fullName,
+             email,
+             mobile,
+             checkIn,
+             checkOut,
+             guests,
 
-               roomType: "Deluxe",
+             roomType: "Deluxe",
 
-               amount: hotel.price,
+             amount: hotel.price,
 
-               paymentMethod,
+             paymentMethod,
+           },
+           {
+             headers: {
+               Authorization: `Bearer ${token}`,
              },
-             {
-               headers: {
-                 Authorization: `Bearer ${token}`,
-               },
-             },
-           );
+           },
+         );
 
            toast.success("Booking Successful!");
 

@@ -23,12 +23,12 @@ function Profile() {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        "http://localhost:3000/api/users/profile",
+        "https://quickstay-backend-1.onrender.com/api/users/profile",
 
         {
           name,
           email,
-          password
+          password,
         },
 
         {
