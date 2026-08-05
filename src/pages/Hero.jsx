@@ -36,10 +36,8 @@ function Hero() {
         className="d-flex flex-column justify-content-center align-items-center"
         style={{
           height: "100vh",
-          // backgroundImage:
-          //   "url('https://images.unsplash.com/photo-1566073771259-6a8506099945')",
           backgroundImage:
-            "url('https://thedubainomad.com/wp-content/uploads/2025/03/image_fx_-2025-03-25T160308.320-1.jpg')",
+            "url('src/assets/quickstayheroimg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}>
