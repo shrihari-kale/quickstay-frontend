@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import HotelCard from "../components/HotelCard";
 import axios from "axios"
+import heroImg from "../assets/quickstayheroimg.jpg";
 
 
 function Hero() {
@@ -12,7 +13,6 @@ function Hero() {
       hotel.name.toLowerCase().includes(search.toLowerCase())||
      hotel.location.toLowerCase().includes(search.toLocaleLowerCase())
     );
-
 
       useEffect(() => {
 
@@ -36,38 +36,37 @@ function Hero() {
         className="d-flex flex-column justify-content-center align-items-center"
         style={{
           height: "100vh",
-          backgroundImage:
-            "url('src/assets/quickstayheroimg.jpg')",
+          backgroundImage: `url(${heroImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}>
+        }}
+      >
+        <div
+          className="d-flex flex-column justify-content-center align-items-center text-center text-white"
+          style={{
+            minHeight: "100vh",
+            minWidth: "100%",
+            backgroundColor: "rgba(0,0,0,0.5)",
+          }}
+        >
+          <h1 className="text-white display-4 display-md-3">
+            Find Your Perfect Stay
+          </h1>
+          <p className="text-white fs-5 text-center px-3">
+            Discover luxury hotels across India
+          </p>
+          <div className="d-flex flex-column flex-md-row gap-3 mt-4">
+            <input
+              type="text"
+              placeholder="Search Hotels..."
+              className="form-control"
+              style={{ width: "300px" }}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
 
-            <div
-    className="d-flex flex-column justify-content-center align-items-center text-center text-white"
-    style={{
-      minHeight: "100vh",
-      minWidth:"100%",
-      backgroundColor: "rgba(0,0,0,0.5)",
-    }}
-  >
-        <h1 className="text-white display-4 display-md-3">
-          Find Your Perfect Stay
-        </h1>
-        <p className="text-white fs-5 text-center px-3">
-          Discover luxury hotels across India
-        </p>
-        <div className="d-flex flex-column flex-md-row gap-3 mt-4">
-          <input
-            type="text"
-            placeholder="Search Hotels..."
-            className="form-control"
-            style={{ width: "300px" }}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          {/* <button className="btn btn-primary">Search</button> */}
-        </div>
+            {/* <button className="btn btn-primary">Search</button> */}
+          </div>
         </div>
       </div>
 
