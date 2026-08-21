@@ -527,3 +527,8 @@ body{
 .hotel_footer__legal a:hover {
   color: var(--hc-brass-light);
 }
+
+/* why choose us  */
+.choose-box:hover {
+  border:solid 1px gray;
+}

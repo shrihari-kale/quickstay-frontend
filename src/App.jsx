@@ -7,7 +7,7 @@ import Booking from "./pages/Booking";
 import MyBooking from "./pages/MyBookings";
 import "./App.css";
 import HotelDetails from "./pages/HotelDetails";
-// import Payment from "./pages/Payment";
+//import Payment from "./pages/Payment";
 import BookingSuccess from "./pages/BookingSuccess";
 import Profile from "./pages/Profile";
 

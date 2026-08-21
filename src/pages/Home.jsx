@@ -5,7 +5,6 @@ import Hero from "./Hero";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 
-
 function Home(){
 
   return(

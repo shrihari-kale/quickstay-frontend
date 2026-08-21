@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function WhyChooseUs() {
+
+      useEffect(() => {
+        AOS.init({duration:2000,})
+      },[]);
+
   const features = [
     {
       icon: "bi-building",
@@ -28,11 +37,15 @@ function WhyChooseUs() {
 
       <div className="row">
         {features.map((item, index) => (
-          <div key={index} className="col-lg-3 col-md-6 mb-4">
-            <div className="card shadow text-center h-100 p-4">
-              
-              <i className={`${item.icon} text-primary`}
-                style={{ fontSize: "50px" }} o></i>
+          <div
+            key={index}
+            className="col-lg-3 col-md-6 mb-4"
+            data-aos="fade-right">
+            <div className="card shadow text-center h-100 p-4 choose-box">
+              <i
+                className={`${item.icon} text-primary`}
+                style={{ fontSize: "50px" }}
+              ></i>
 
               <h4 className="mt-3">{item.title}</h4>
 

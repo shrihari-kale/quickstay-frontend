@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import HotelCard from "../components/HotelCard";
 import axios from "axios"
 import heroImg from "../assets/quickstayheroimg.jpg";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Hero() {
       const [hotels, setHotels] = useState([]);
@@ -30,6 +31,12 @@ function Hero() {
           };
           getHotels();
       },[]);
+
+      // effect
+
+      useEffect(() => {
+        AOS.init({duration:2000,})
+      },[]);
   return (
     <div>
       <div
@@ -49,10 +56,17 @@ function Hero() {
             backgroundColor: "rgba(0,0,0,0.5)",
           }}
         >
-          <h1 className="text-white display-4 display-md-3">
+          <h1
+            className="text-white display-4 display-md-3"
+            data-aos="fade-down"
+          >
             Find Your Perfect Stay
           </h1>
-          <p className="text-white fs-5 text-center px-3">
+          <p
+            className="text-white fs-5 text-center px-3"
+            data-aos="fade-down"
+            // data-aos-delay="200"
+          >
             Discover luxury hotels across India
           </p>
           <div className="d-flex flex-column flex-md-row gap-3 mt-4">
