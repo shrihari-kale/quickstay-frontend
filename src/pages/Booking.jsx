@@ -84,7 +84,7 @@ function Booking() {
   return (
     <div className="container mt-5">
       <div className=" row ">
-        <h3 className="mb-3">Booking Details</h3>
+        <h3 className="mb-3 booking_detail">Booking Details</h3>
 
         <div className="col-md-7">
           <div className="card p-4 shadow">
@@ -148,14 +148,14 @@ function Booking() {
             <h4>{hotel.name}</h4>
             <p>{hotel.location}</p>
             <p>{hotel.roomTypes}</p>
-            <h5>₹ {hotel.price}</h5>
+            <h5>₹{hotel.price}</h5>
 
             <h4 className="mt-3">Select Payment Method</h4>
             <select
               className="p-1 w-50"
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
-            >
+              >
               <option>UPI</option>
               <option>Card</option>
               <option>Net Banking</option>

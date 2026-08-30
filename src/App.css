@@ -99,6 +99,9 @@ body{
       flex-direction: column;
       margin-left: 10px;
      }
+     .booking_detail{
+      text-align: center;
+     }
 }
 
 /* tablet */
@@ -129,13 +132,6 @@ body{
     padding: 3px;
     width: 100px;
 }
-/* .popular_content{
-    padding: 1rem;
-} */
-
-/* .popular_content p{
-    color: var(--text-light);
-} */
 
 /* bookingsuccess page */
 .successfulContainer{
@@ -226,14 +222,8 @@ body{
      .footer_container{
         gap: 2rem;
      }
+     
   }
-
-/*
-  Boutique-hotel card styling for your existing markup.
-  Fonts (add once, e.g. in index.html):
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-*/
 
 .popular_grid {
   display: grid;
@@ -419,6 +409,9 @@ body{
 @media (max-width: 480px) {
   .hotel_footer__top {
     grid-template-columns: 1fr;
+  }
+  .text-end{
+    display: none;
   }
 }
 

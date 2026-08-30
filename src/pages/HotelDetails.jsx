@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import HotelCard from "../components/HotelCard";
 
-// import RecommendedHotel from "../components/RecommendedHotels";
-// import RecommendedHotels from "../components/RecommendedHotels";
 
 function HotelDetails() {
   const navigate = useNavigate();
@@ -36,7 +34,7 @@ function HotelDetails() {
     // );
 
 
-
+  
   useEffect(() => {
     const getHotel = async () => {
       try {
@@ -72,7 +70,7 @@ function HotelDetails() {
       <div className="container my-5">
         {/* Header */}
         <div className="top-detail d-flex justify-content-between align-items-center flex-wrap mb-3">
-          <div>
+          <div className="">
             <h2 className="mb-1">{hotel.name}</h2>
             <p className="text-muted mb-1">
               <i className="bi bi-geo-alt-fill me-1"></i>
@@ -86,7 +84,7 @@ function HotelDetails() {
             <h2 className="price">₹ {hotel.price}</h2>
             <small className="text-muted"> Including all taxes + fees</small>
             <div className="mt-3">
-              <button class="btn btn-success btn-view">View Deal</button>
+              <button className="btn btn-success btn-view">View Deal</button>
             </div>
           </div>
         </div>
@@ -97,8 +95,7 @@ function HotelDetails() {
             src={hotel.images[activeImage]}
             alt={hotel.name}
             className="w-100"
-            style={{ maxHeight: "480px", objectFit: "cover" }}
-          />
+            style={{ maxHeight: "400px", objectFit: "cover"}}/>
           <div className="d-flex gap-2 p-2 bg-light overflow-auto">
             {hotel.images.map((img, index) => (
               <img
@@ -122,6 +119,7 @@ function HotelDetails() {
               />
             ))}
           </div>
+
         </div>
 
         <div className="row g-4">
@@ -185,7 +183,7 @@ function HotelDetails() {
               </div>
             </div> */}
 
-            <h4 className="card-title mb-3">Room Types</h4>
+            {/* <h4 className="card-title mb-3">Room Types</h4> */}
 
             <div className="row">
               {hotel.roomTypes.map((room) => (
@@ -246,17 +244,17 @@ function HotelDetails() {
                 </h2>
                 <button
                   className="btn btn-primary btn-lg w-100"
-                  disabled={!selectedRoom}
+                  // disabled={!selectedRoom}
                   onClick={() =>
                     navigate("/booking", {
                       state: {
                         hotel,
-                        room: selectedRoom,
+                        // room: selectedRoom,
                       },
                     })
                   }
                 >
-                  {selectedRoom ? "Book Now" : "Select a Room"}
+                  {selectedRoom ? "Book Now" : "Booking Room"}
                 </button>
               </div>
             </div>
@@ -271,7 +269,7 @@ function HotelDetails() {
           ))}
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
