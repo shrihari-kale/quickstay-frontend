@@ -58,6 +58,10 @@ body{
    font-family: "Fraunces", Georgia, serif;
 }
 
+.display-text {
+   font-family: "Fraunces", Georgia, serif;
+   font-size: 4rem;
+}
 @media(max-width:991px){
   .navbar-nav{
     text-align: center;

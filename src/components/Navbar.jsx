@@ -48,10 +48,9 @@ function Navbar() {
 
         <Link
           to="/"
-          className="navbar-brand d-flex align-items-center fw-bold text-white"
-        >
-          <img src={logo} alt="logo" width="40" className="me-2" />
-          uickStay
+          className="navbar-brand d-flex align-items-center fw-bold text-white">
+
+          <img src={logo} alt="logo" width="40" className="me-1"/>uickStay
         </Link>
 
         {/* Hamburger */}

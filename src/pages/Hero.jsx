@@ -57,13 +57,13 @@ function Hero() {
           }}
         >
           <h1
-            className="text-white display-4 display-md-3"
+            className="text-white display-4 display-md-3 display-text"
             data-aos="fade-down"
           >
             Find Your Perfect Stay
           </h1>
           <p
-            className="text-white fs-5 text-center px-3"
+            className="text-white fs-4 text-center px-3 display-text"
             data-aos="fade-down"
             // data-aos-delay="200"
           >
@@ -84,7 +84,7 @@ function Hero() {
         </div>
       </div>
 
-      <h2 className="section_header mt-5">Popular Hotels</h2>
+      <h2 className="text-center fw-bold mt-5">Popular Hotels</h2>
 
       <div className="popular_grid container mt-5">
         {filteredHotels.map((hotel) => (

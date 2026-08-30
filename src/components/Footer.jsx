@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Footer() {
+   useEffect(()=> {
+    AOS.init({duration:2000,})
+   })
+
   return (
-    <footer className="hotel_footer bg-dark">
+    <footer className="hotel_footer bg-dark"
+      data-aos="fade-up">
       <div className="hotel_footer__top container">
         <div className="hotel_footer__brand">
           <h3>QuickStay</h3>
