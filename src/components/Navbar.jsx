@@ -2,15 +2,20 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from "../assets/q-letter.png";
+import { useSearch } from "../Context/SearchContext";
 
 
 function Navbar() {
+  
+  const { search, setSearch }= useSearch();
+
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [scrolled, setScrolled] = useState(false);
 
   const navigate = useNavigate();
 
+  
   const token = localStorage.getItem("token");
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -36,11 +41,7 @@ function Navbar() {
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top ${
-        isHome
-        ?scrolled
-         ? "bg-dark shadow" 
-         : "" 
-         :"bg-dark shadow"
+        isHome ? (scrolled ? "bg-dark shadow" : "") : "bg-dark shadow"
       }`}
     >
       <div className="container">
@@ -48,10 +49,25 @@ function Navbar() {
 
         <Link
           to="/"
-          className="navbar-brand d-flex align-items-center fw-bold text-white">
-
-          <img src={logo} alt="logo" width="40" className="me-1"/>uickStay
+          className="navbar-brand d-flex align-items-center fw-bold text-white"
+        >
+          <img src={logo} alt="logo" width="40" className="me-1" />
+          uickStay
         </Link>
+
+        {/* Search bar */}
+
+        <div className="d-flex flex-column flex-md-row mt-2" style={{marginLeft:"15%"}}>
+          <input
+            type="text"
+            placeholder="Search Hotels..."
+            className="form-control"
+            style={{ width: "300px" }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          /> 
+          {/* <button className="btn btn-primary">Search</button> */}
+        </div>
 
         {/* Hamburger */}
 

@@ -14,19 +14,19 @@ import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/mybooking" element={<MyBooking />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/hotel/:id" element={<HotelDetails />} />
-        {/* <Route path="/payment" element={<Payment />} /> */}
-        <Route path="/success" element={<BookingSuccess />}/>
-        <Route path="/profile" element={<Profile/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/mybooking" element={<MyBooking />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/hotel/:id" element={<HotelDetails />} />
+          {/* <Route path="/payment" element={<Payment />} /> */}
+          <Route path="/success" element={<BookingSuccess />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 

@@ -9,8 +9,7 @@ function Footer() {
    })
 
   return (
-    <footer className="hotel_footer bg-dark"
-      data-aos="fade-up">
+    <footer className="hotel_footer bg-dark">
       <div className="hotel_footer__top container">
         <div className="hotel_footer__brand">
           <h3>QuickStay</h3>

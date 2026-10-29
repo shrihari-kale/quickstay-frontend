@@ -6,10 +6,13 @@ import axios from "axios"
 import hero from "../assets/hero.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useSearch } from "../Context/SearchContext";
+
 
 function Hero() {
       const [hotels, setHotels] = useState([]);
-      const [search, setSearch] = useState("");
+      // const [search, setSearch] = useState("");
+  const {search} = useSearch();
 
     const filteredHotels = hotels.filter((hotel) =>
       hotel.name.toLowerCase().includes(search.toLowerCase())||
@@ -70,18 +73,6 @@ function Hero() {
           >
             Discover luxury hotels across India
           </p>
-          <div className="d-flex flex-column flex-md-row gap-3 mt-4">
-            <input
-              type="text"
-              placeholder="Search Hotels..."
-              className="form-control"
-              style={{ width: "300px" }}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-
-            {/* <button className="btn btn-primary">Search</button> */}
-          </div>
         </div>
       </div>
 
