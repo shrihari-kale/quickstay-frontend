@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import HotelCard from "../components/HotelCard";
 import axios from "axios"
-import heroImg from "../assets/quickstayheroimg.jpg";
+// import heroImg from "../assets/quickstayheroimg.jpg";
+import hero from "../assets/hero.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -43,7 +44,7 @@ function Hero() {
         className="d-flex flex-column justify-content-center align-items-center"
         style={{
           height: "100vh",
-          backgroundImage: `url(${heroImg})`,
+          backgroundImage: `url(${hero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

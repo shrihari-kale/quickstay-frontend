@@ -269,6 +269,7 @@ function HotelDetails() {
           ))}
         </div>
       </div>
+
       <Footer/>
     </div>
   );
