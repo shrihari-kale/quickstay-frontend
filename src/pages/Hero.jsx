@@ -7,7 +7,7 @@ import hero from "../assets/hero.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useSearch } from "../Context/SearchContext";
-
+import PopularDestination from "../components/PopularDestination";
 
 function Hero() {
       const [hotels, setHotels] = useState([]);
@@ -76,9 +76,11 @@ function Hero() {
         </div>
       </div>
 
-      <h2 className="text-center fw-bold mt-5">Popular Hotels</h2>
-
-      <div className="popular_grid container mt-5">
+      <PopularDestination />
+      <div className="container mt-5">
+        <h2 className="fw-bold">Popular Hotels</h2>
+      </div>
+      <div className="popular_grid container mt-4">
         {filteredHotels.map((hotel) => (
           <HotelCard key={hotel._id} hotel={hotel} />
         ))}

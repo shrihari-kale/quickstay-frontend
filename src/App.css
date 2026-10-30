@@ -511,11 +511,6 @@ body{
   margin: 0;
 }
 
-.hotel_footer__legal {
-  display: flex;
-  gap: 18px;
-}
-
 .hotel_footer__legal a {
   color: var(--hc-stone);
   text-decoration: none;
@@ -525,7 +520,111 @@ body{
   color: var(--hc-brass-light);
 }
 
+.hotel_footer__legal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.method-img{
+  width: 60px;
+  background-color: white;
+  padding: 4px;
+  border-radius: 2px;
+
+}
+
+
 /* why choose us  */
 .choose-box:hover {
   border:solid 1px gray;
+}
+
+.service-img {
+  width:110%;
+  border-radius: 8px;
+}
+.service-detail{
+  margin: auto;
+  margin-left: 8%;
+}
+.fw-semibold {
+  margin-left: 8%;
+}
+.servive-provide{
+  margin-top: 9%;
+  margin-bottom: 5%;
+}
+li{
+list-style: none;
+}
+
+@media (max-width: 768px) {
+ .row {
+ display:flex;
+ flex-direction: column;
+}
+.service-img {
+  width:100%;
+  border-radius: 8px;
+}
+.service-detail{
+  margin: auto;
+  margin-top:50px;
+}
+.servive-provide{
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.card{
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* dark overlay */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(       to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.1)
+    ); */
+}
+
+.card h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  z-index: 0;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+ .destination-grid {
+ display: flex;
+ flex-direction: column;
+}
 }

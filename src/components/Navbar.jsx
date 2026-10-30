@@ -57,7 +57,7 @@ function Navbar() {
 
         {/* Search bar */}
 
-        <div className="d-flex flex-column flex-md-row mt-2" style={{marginLeft:"15%"}}>
+        {/* <div className="d-flex flex-column flex-md-row mt-2" style={{marginLeft:"15%"}}>
           <input
             type="text"
             placeholder="Search Hotels..."
@@ -66,8 +66,7 @@ function Navbar() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           /> 
-          {/* <button className="btn btn-primary">Search</button> */}
-        </div>
+        </div> */}
 
         {/* Hamburger */}
 
@@ -83,6 +82,19 @@ function Navbar() {
         {/* Menu */}
 
         <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className="d-flex flex-column flex-md-row mt-2"
+            style={{ marginLeft: "15%" }}
+          >
+            <input
+              type="text"
+              placeholder="Search Hotels..."
+              className="form-control"
+              style={{ width: "300px" }}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
           <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
               <Link className="nav-link " to="/">

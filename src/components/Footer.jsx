@@ -77,10 +77,51 @@ function Footer() {
       <div className="hotel_footer__bottom container">
         <p>Develope by: Shrihari Kale</p>
         <p>© {new Date().getFullYear()} QuickStay. All rights reserved.</p>
+
         <div className="hotel_footer__legal">
-          <Link to="/privacy">Privacy</Link>
-          <Link to="/terms">Terms</Link>
-          <Link to="/sitemap">Sitemap</Link>
+          {/* <p>Payment Method</p> */}
+          
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/phonepe.svg"
+            alt="phonepay"
+          />
+
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/paytm-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/bhim-app-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/google-pay-acceptance-mark-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/rupay-logo-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img py-2"
+            src="https://www.sastasafar.com/img/footer_svg/master-card-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/visa-icon.svg"
+            alt=""
+          />
+          <img
+            className="method-img"
+            src="https://www.sastasafar.com/img/footer_svg/american-express.svg"
+            alt=""
+          />
         </div>
       </div>
     </footer>

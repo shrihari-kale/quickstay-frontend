@@ -10,10 +10,12 @@ import HotelDetails from "./pages/HotelDetails";
 //import Payment from "./pages/Payment";
 import BookingSuccess from "./pages/BookingSuccess";
 import Profile from "./pages/Profile";
+import { SearchProvider } from "./Context/SearchContext";
 
 
 function App() {
   return (
+    <SearchProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
+    </SearchProvider>
   );
 }
 
