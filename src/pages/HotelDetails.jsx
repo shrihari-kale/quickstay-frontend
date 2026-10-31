@@ -90,15 +90,27 @@ function HotelDetails() {
         </div>
 
         {/* Main Image + Thumbnails */}
-        <div className="card border-0 shadow-sm mb-4 overflow-hidden">
-          <img
-            src={hotel.images[activeImage]}
-            alt={hotel.name}
-            className="w-100"
-            style={{ maxHeight: "400px", objectFit: "cover"}}/>
-          <div className="d-flex gap-2 p-2 bg-light overflow-auto">
+        <div className="hotel-gallery-grid mb-4">
+          <div className="main-image-container">
+            <img
+              src={hotel.images[activeImage]}
+              alt={hotel.name}
+              className="gallery-img"
+            />
+          </div>
+          <div className="small-images-grid">
             {hotel.images.map((img, index) => (
-              <img
+              <div
+                className="small-image-container"
+                key={index}
+                onClick={() => setActiveImage(index + 1)}
+              >
+                <img
+                  src={img}
+                  alt={`${hotel.name} ${index + 2}`}
+                  className="gallery-img"
+                />
+                {/* <img
                 key={index}
                 src={img}
                 alt={`${hotel.name} ${index + 1}`}
@@ -108,18 +120,10 @@ function HotelDetails() {
                     ? "border-primary border-3"
                     : "border-secondary-subtle"
                 }`}
-                style={{
-                  width: "90px",
-                  height: "70px",
-                  objectFit: "cover",
-                  cursor: "pointer",
-                  opacity: activeImage === index ? 1 : 0.7,
-                  flexShrink: 0,
-                }}
-              />
+              /> */}
+              </div>
             ))}
           </div>
-
         </div>
 
         <div className="row g-4">
@@ -270,7 +274,7 @@ function HotelDetails() {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
