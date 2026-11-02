@@ -74,7 +74,7 @@ function HotelDetails() {
             <h2 className="mb-1">{hotel.name}</h2>
             <p className="text-muted mb-1">
               <i className="bi bi-geo-alt-fill me-1"></i>
-              {hotel.location}
+              {hotel.fulllocation}
             </p>
             <p>
               ⭐⭐⭐⭐☆ <strong>8.4 Very Good</strong> (1,636 Reviews)
@@ -83,31 +83,32 @@ function HotelDetails() {
           <div className="text-end">
             <h2 className="price">₹ {hotel.price}</h2>
             <small className="text-muted"> Including all taxes + fees</small>
-            <div className="mt-3">
+            {/* <div className="mt-3">
               <button className="btn btn-success btn-view">View Deal</button>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Main Image + Thumbnails */}
         <div className="hotel-gallery-grid mb-4">
+          {/* mail img */}
           <div className="main-image-container">
             <img
-              src={hotel.images[activeImage]}
+              src={hotel.images?.[activeImage]}
               alt={hotel.name}
               className="gallery-img"
             />
           </div>
           <div className="small-images-grid">
-            {hotel.images.map((img, index) => (
+            {hotel.images?.slice(1, 5).map((img, index) => (
               <div
                 className="small-image-container"
                 key={index}
-                onClick={() => setActiveImage(index + 1)}
+                onClick={() => setActiveImage(index)}
               >
                 <img
                   src={img}
-                  alt={`${hotel.name} ${index + 2}`}
+                  alt={`${hotel.name} ${index + 0}`}
                   className="gallery-img"
                 />
                 {/* <img
@@ -189,7 +190,7 @@ function HotelDetails() {
 
             {/* <h4 className="card-title mb-3">Room Types</h4> */}
 
-            <div className="row">
+            {/* <div className="row">
               {hotel.roomTypes.map((room) => (
                 <div className="col-md-6 mb-3" key={room.type}>
                   <div
@@ -222,7 +223,7 @@ function HotelDetails() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="card border-0 shadow-sm">
               <div className="card-body">
