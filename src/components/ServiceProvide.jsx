@@ -20,20 +20,20 @@ function ServiceProvide() {
 
             <ul className="mt-4">
               <li className="p-1 fs-5">
-                <i class="bi bi-check-circle-fill p-2"></i>Best Rate Guaranteed
+                <i className="bi bi-check-circle-fill p-2"></i>Best Rate Guaranteed
               </li>
               <li className="p-1 fs-5">
-                <i class="bi bi-check-circle-fill p-2"></i>Payment at Hotel
+                <i className="bi bi-check-circle-fill p-2"></i>Payment at Hotel
               </li>
               <li className="p-1 fs-5">
-                <i class="bi bi-check-circle-fill p-2"></i>Exclusive Members
+                <i className="bi bi-check-circle-fill p-2"></i>Exclusive Members
                 Reward
               </li>
               <li className="p-1 fs-5">
-                <i class="bi bi-check-circle-fill p-2"></i>WiFi Access
+                <i className="bi bi-check-circle-fill p-2"></i>WiFi Access
               </li>
               <li className="p-1 fs-5">
-                <i class="bi bi-check-circle-fill p-2"></i>No Hidden Charges
+                <i className="bi bi-check-circle-fill p-2"></i>No Hidden Charges
               </li>
             </ul>
           </div>

@@ -156,6 +156,12 @@ body{
 .bookingSuccess{
   animation: fadeIn 3s;
 }
+@media (max-width: 768px) {
+  .hotel-gallery-grid {
+    height: 350px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @keyframes fadeIn{
     from{
