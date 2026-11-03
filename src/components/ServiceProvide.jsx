@@ -1,17 +1,28 @@
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function ServiceProvide() {
+
+      useEffect(() => {
+        AOS.init({duration:2000,})
+      },[]);
+
     return (
       <div className="container servive-provide">
         <div className="row">
-          <div className="col">
+          <div
+            className="col"
+            // data-aos="fade-right"
+            >
             <img
               className="service-img"
               src="https://i.travelapi.com/lodging/5000000/4150000/4145100/4145002/b966c972_z.jpg"
             />
           </div>
 
-          <div className="col service-detail">
+          <div
+            className="col service-detail">
             <h3 className="fw-semibold ">
               We always provide the best for<br></br>
               our hotel visitors. We are<br></br>
@@ -20,7 +31,8 @@ function ServiceProvide() {
 
             <ul className="mt-4">
               <li className="p-1 fs-5">
-                <i className="bi bi-check-circle-fill p-2"></i>Best Rate Guaranteed
+                <i className="bi bi-check-circle-fill p-2"></i>Best Rate
+                Guaranteed
               </li>
               <li className="p-1 fs-5">
                 <i className="bi bi-check-circle-fill p-2"></i>Payment at Hotel

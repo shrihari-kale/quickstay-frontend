@@ -82,14 +82,14 @@ function Navbar() {
         {/* Menu */}
 
         <div className="collapse navbar-collapse" id="navbarNav">
+          {/* searchbar */}
           <div
-            className="d-flex flex-column flex-md-row mt-2"
-            style={{ marginLeft: "15%" }}
-          >
+            className="navbar-search mx-lg-auto my-3 my-lg-0"
+            style={{ marginLeft: "15%" }}>
             <input
               type="text"
               placeholder="Search Hotels..."
-              className="form-control"
+              className="form-control search-bar"
               style={{ width: "300px" }}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
