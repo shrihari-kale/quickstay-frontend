@@ -51,7 +51,7 @@ function MyBooking() {
         <div className="container mypage">
           {/* <h1>{JSON.stringify(bookings)}</h1> */}
           <div className="row mybooking">
-            <h3 className="mt-5">MyBooking</h3>
+            <h3 className="mt-5 mb-4">MyBooking</h3>
 
             {bookings.map((booking) => {
               return (

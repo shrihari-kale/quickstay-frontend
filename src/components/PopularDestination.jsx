@@ -1,7 +1,7 @@
 function PopularDestination() {
     return (
       <div className="container mt-5">
-        <h2>Book Hotels at Popular Destinations</h2>
+        <h2 className="fw-bold">Book Hotels at Popular Destinations</h2>
         <div className="destination-grid mt-4">
           <div className="destination-card">
             <img src="https://images.unsplash.com/photo-1667849521371-e78b4d603076?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" />
